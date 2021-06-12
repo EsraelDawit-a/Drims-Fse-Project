@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 100px;">
+
+
+
+
+
+<div class="container alert alert-success" style='margin-top: 100px;' role="alert">
+    <h4 class="alert-heading">Choose Password Reset Options </h4>
+    <p>Ohh You lost Your Password . Don't Worry Just Choose A way to Reset Your Password.</p>
+    <hr>
+    <a class = 'btn btn-primary' href="{% url 'password_reset' %}">Email Reset</a>
+    <a style="float: right;" class = 'btn btn-warning' href="#">Phone Reset</a>
+  </div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+{% endblock %}

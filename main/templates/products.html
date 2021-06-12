@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static  %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Drims Web Systems</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="{% static 'vendor2/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+<!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' }">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+  </head>
+
+  <body> --> -->
+    {%block content %}
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>new arrivals</h4>
+              <h2>Drims products</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading" style="float: right;">
+              <a href="{% url 'productlist' %}">view all products <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="filters">
+              <ul>
+                  <li class="active" data-filter="*">All Products</li>
+                  <li data-filter=".fa">Fasion</li>
+                  <li data-filter=".dev">Farm Stock</li>
+                  <li data-filter=".gra">Other</li>
+                  <li data-filter=".elec">Electronics</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+                  {% for item in farm_stock%}
+                    <div class="col-lg-4 col-md-4 all dev">
+                      <div class="product-item">
+                        <a href="#"><img  height='200' src="{{item.product_image.url}}" alt=""></a>
+                        <div class="down-content">
+                          <a href="#"><h4>{{item.product_name}}</h4></a>
+                          <h6>{{item.price}} Birr</h6>
+                          <p>{{item.description}}.</p>
+                          <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                          </ul>
+                          <span>Reviews (12)</span>
+                          <a class="all-deals" href="{{ item.get_absloute_url }}">See all deals <i class="fa fa-angle-right icon"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                   {%endfor%}
+
+                    {% for item in fashion%}
+                    <div class="col-lg-4 col-md-4 all fa">
+                      <div class="product-item">
+                        <a href="#"><img height='100' src="{{item.product_image.url}}" alt=""></a>
+                        <div class="down-content">
+                          <a href="#"><h4>{{item.product_name}}</h4></a>
+                          <h6>{{item.price}} Birr</h6>
+                          <p>{{item.description}}.</p>
+                          <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                          </ul>
+                          <span>Reviews (24)</span>
+                          <a class="all-deals" href="{{ item.get_absloute_url }}">See all deals <i class="fa fa-angle-right icon"></i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                     {%endfor%}
+                    
+                     {% for item in electronics%}
+                     <div class="col-lg-4 col-md-4 all elec">
+                       <div class="product-item">
+                         <a href="#"><img height='100' src="{{item.product_image.url}}" alt=""></a>
+                         <div class="down-content">
+                           <a href="#"><h4>{{item.product_name}}</h4></a>
+                           <h6>{{item.price}} Birr</h6>
+                           <p>{{item.description}}.</p>
+                           <ul class="stars">
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                           </ul>
+                           <span>Reviews (24)</span>
+                           <a class="all-deals" href="{{ item.get_absloute_url }}">See all deals <i class="fa fa-angle-right icon"></i></a>
+                         </div>
+                       </div>
+                     </div>
+ 
+                      {%endfor%}
+
+
+
+                      {% for item in other%}
+                     <div class="col-lg-4 col-md-4 all gra">
+                       <div class="product-item">
+                         <a href="#"><img height='100' src="{{item.product_image.url}}" alt=""></a>
+                         <div class="down-content">
+                           <a href="#"><h4>{{item.product_name}}</h4></a>
+                           <h6>{{item.price}} Birr</h6>
+                           <p>{{item.description}}.</p>
+                           <ul class="stars">
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                             <li><i class="fa fa-star"></i></li>
+                           </ul>
+                           <span>Reviews (24)</span>
+                           <a class="all-deals" href="{{ item.get_absloute_url }}">See all deals <i class="fa fa-angle-right icon"></i></a>
+                         </div>
+                       </div>
+                     </div>
+ 
+                      {%endfor%}
+                     
+                </div>
+            </div>
+          </div>
+
+
+         
+        
+         
+        </div>
+      </div>
+    </div>
+
+
+{%endblock%}
+
+    
+

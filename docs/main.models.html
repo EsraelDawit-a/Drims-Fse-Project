@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main.models</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="main.html"><font color="#ffffff">main</font></a>.models</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cesrael%5Cdesktop%5Cproject%5Ctest2%5Cmain%5Cmodels.py">c:\users\esrael\desktop\project\test2\main\models.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="django.db.models.html">django.db.models</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="django.contrib.auth.models.html#AbstractUser">django.contrib.auth.models.AbstractUser</a>(<a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a>, <a href="django.contrib.auth.models.html#PermissionsMixin">django.contrib.auth.models.PermissionsMixin</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="main.models.html#CustomUser">CustomUser</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="django.db.models.base.html#Model">django.db.models.base.Model</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="main.models.html#Profile">Profile</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CustomUser">class <strong>CustomUser</strong></a>(<a href="django.contrib.auth.models.html#AbstractUser">django.contrib.auth.models.AbstractUser</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#CustomUser">CustomUser</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#CustomUser">CustomUser</a>(id,&nbsp;password,&nbsp;last_login,&nbsp;is_superuser,&nbsp;username,&nbsp;first_name,&nbsp;last_name,&nbsp;email,&nbsp;is_staff,&nbsp;is_active,&nbsp;date_joined,&nbsp;phone,&nbsp;registerddate,&nbsp;is_banned,&nbsp;Email_Adress,&nbsp;role,&nbsp;phone_vertified,&nbsp;email_vertified,&nbsp;is_premium_account,&nbsp;Adress,&nbsp;optional_adress)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="main.models.html#CustomUser">CustomUser</a></dd>
+<dd><a href="django.contrib.auth.models.html#AbstractUser">django.contrib.auth.models.AbstractUser</a></dd>
+<dd><a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a></dd>
+<dd><a href="django.contrib.auth.models.html#PermissionsMixin">django.contrib.auth.models.PermissionsMixin</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<strong>Adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>Email_Adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>email_vertified</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CustomUser-get_next_by_date_joined"><strong>get_next_by_date_joined</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: date_joined&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="CustomUser-get_next_by_registerddate"><strong>get_next_by_registerddate</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: registerddate&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="CustomUser-get_previous_by_date_joined"><strong>get_previous_by_date_joined</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: date_joined&gt;, is_next=False, **kwargs)</dt></dl>
+
+<dl><dt><a name="CustomUser-get_previous_by_registerddate"><strong>get_previous_by_registerddate</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: registerddate&gt;, is_next=False, **kwargs)</dt></dl>
+
+<dl><dt><a name="CustomUser-get_role_display"><strong>get_role_display</strong></a> = _method(self, *, field=&lt;django.db.models.fields.CharField: role&gt;)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>is_banned</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>is_premium_account</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>optional_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>phone</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>phone_vertified</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>registerddate</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>role</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>commenter</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>groups</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;forward&nbsp;and&nbsp;reverse&nbsp;sides&nbsp;of<br>
+a&nbsp;many-to-many&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Pizza(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toppings&nbsp;=&nbsp;ManyToManyField(Topping,&nbsp;related_name='pizzas')<br>
+&nbsp;<br>
+``Pizza.toppings``&nbsp;and&nbsp;``Topping.pizzas``&nbsp;are&nbsp;``ManyToManyDescriptor``<br>
+instances.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>logentry_set</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>messenger</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>price_user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>product_ordered_by</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>product_owner</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>product_user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>profile</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a&nbsp;one-to-one<br>
+relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Restaurant(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;place&nbsp;=&nbsp;OneToOneField(Place,&nbsp;related_name='restaurant')<br>
+&nbsp;<br>
+``Place.restaurant``&nbsp;is&nbsp;a&nbsp;``ReverseOneToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>transport_ordered_by</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>transport_owner</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>transport_user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>user_permissions</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;forward&nbsp;and&nbsp;reverse&nbsp;sides&nbsp;of<br>
+a&nbsp;many-to-many&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Pizza(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toppings&nbsp;=&nbsp;ManyToManyField(Topping,&nbsp;related_name='pizzas')<br>
+&nbsp;<br>
+``Pizza.toppings``&nbsp;and&nbsp;``Topping.pizzas``&nbsp;are&nbsp;``ManyToManyDescriptor``<br>
+instances.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>wanted_product_user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'main.models.CustomUser.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'main.models.CustomUser.MultipleObjectsReturned'&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.contrib.auth.models.html#AbstractUser">django.contrib.auth.models.AbstractUser</a>:<br>
+<dl><dt><a name="CustomUser-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#CustomUser-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<strong>date_joined</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>email</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CustomUser-email_user"><strong>email_user</strong></a>(self, subject, message, from_email=None, **kwargs)</dt><dd><tt>Send&nbsp;an&nbsp;email&nbsp;to&nbsp;this&nbsp;user.</tt></dd></dl>
+
+<strong>first_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CustomUser-get_full_name"><strong>get_full_name</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;first_name&nbsp;plus&nbsp;the&nbsp;last_name,&nbsp;with&nbsp;a&nbsp;space&nbsp;in&nbsp;between.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-get_short_name"><strong>get_short_name</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;short&nbsp;name&nbsp;for&nbsp;the&nbsp;user.</tt></dd></dl>
+
+<strong>is_staff</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>last_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>username</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data and other attributes inherited from <a href="django.contrib.auth.models.html#AbstractUser">django.contrib.auth.models.AbstractUser</a>:<br>
+<dl><dt><strong>EMAIL_FIELD</strong> = 'email'</dl>
+
+<dl><dt><strong>Meta</strong> = &lt;class 'django.contrib.auth.models.AbstractUser.Meta'&gt;</dl>
+
+<dl><dt><strong>REQUIRED_FIELDS</strong> = ['email']</dl>
+
+<dl><dt><strong>USERNAME_FIELD</strong> = 'username'</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.contrib.auth.models.UserManager object&gt;</dl>
+
+<dl><dt><strong>username_validator</strong> = &lt;django.contrib.auth.validators.UnicodeUsernameValidator object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a>:<br>
+<dl><dt><a name="CustomUser-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-check_password"><strong>check_password</strong></a>(self, raw_password)</dt><dd><tt>Return&nbsp;a&nbsp;boolean&nbsp;of&nbsp;whether&nbsp;the&nbsp;raw_password&nbsp;was&nbsp;correct.&nbsp;Handles<br>
+hashing&nbsp;formats&nbsp;behind&nbsp;the&nbsp;scenes.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-get_session_auth_hash"><strong>get_session_auth_hash</strong></a>(self)</dt><dd><tt>Return&nbsp;an&nbsp;HMAC&nbsp;of&nbsp;the&nbsp;password&nbsp;field.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-get_username"><strong>get_username</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;username&nbsp;for&nbsp;this&nbsp;User.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-has_usable_password"><strong>has_usable_password</strong></a>(self)</dt><dd><tt>Return&nbsp;False&nbsp;if&nbsp;<a href="#CustomUser-set_unusable_password">set_unusable_password</a>()&nbsp;has&nbsp;been&nbsp;called&nbsp;for&nbsp;this&nbsp;user.</tt></dd></dl>
+
+<strong>last_login</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CustomUser-natural_key"><strong>natural_key</strong></a>(self)</dt></dl>
+
+<strong>password</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CustomUser-save"><strong>save</strong></a>(self, *args, **kwargs)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-set_password"><strong>set_password</strong></a>(self, raw_password)</dt></dl>
+
+<dl><dt><a name="CustomUser-set_unusable_password"><strong>set_unusable_password</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a>:<br>
+<dl><dt><a name="CustomUser-get_email_field_name"><strong>get_email_field_name</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="CustomUser-normalize_username"><strong>normalize_username</strong></a>(username)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a>:<br>
+<dl><dt><strong>is_anonymous</strong></dt>
+<dd><tt>Always&nbsp;return&nbsp;False.&nbsp;This&nbsp;is&nbsp;a&nbsp;way&nbsp;of&nbsp;comparing&nbsp;User&nbsp;objects&nbsp;to<br>
+anonymous&nbsp;users.</tt></dd>
+</dl>
+<dl><dt><strong>is_authenticated</strong></dt>
+<dd><tt>Always&nbsp;return&nbsp;True.&nbsp;This&nbsp;is&nbsp;a&nbsp;way&nbsp;to&nbsp;tell&nbsp;if&nbsp;the&nbsp;user&nbsp;has&nbsp;been<br>
+authenticated&nbsp;in&nbsp;templates.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="django.contrib.auth.base_user.html#AbstractBaseUser">django.contrib.auth.base_user.AbstractBaseUser</a>:<br>
+<dl><dt><strong>is_active</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="django.contrib.auth.models.html#PermissionsMixin">django.contrib.auth.models.PermissionsMixin</a>:<br>
+<dl><dt><a name="CustomUser-get_all_permissions"><strong>get_all_permissions</strong></a>(self, obj=None)</dt></dl>
+
+<dl><dt><a name="CustomUser-get_group_permissions"><strong>get_group_permissions</strong></a>(self, obj=None)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;permission&nbsp;strings&nbsp;that&nbsp;this&nbsp;user&nbsp;has&nbsp;through&nbsp;their<br>
+groups.&nbsp;Query&nbsp;all&nbsp;available&nbsp;auth&nbsp;backends.&nbsp;If&nbsp;an&nbsp;object&nbsp;is&nbsp;passed&nbsp;in,<br>
+return&nbsp;only&nbsp;permissions&nbsp;matching&nbsp;this&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-get_user_permissions"><strong>get_user_permissions</strong></a>(self, obj=None)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;permission&nbsp;strings&nbsp;that&nbsp;this&nbsp;user&nbsp;has&nbsp;directly.<br>
+Query&nbsp;all&nbsp;available&nbsp;auth&nbsp;backends.&nbsp;If&nbsp;an&nbsp;object&nbsp;is&nbsp;passed&nbsp;in,<br>
+return&nbsp;only&nbsp;permissions&nbsp;matching&nbsp;this&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-has_module_perms"><strong>has_module_perms</strong></a>(self, app_label)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;user&nbsp;has&nbsp;any&nbsp;permissions&nbsp;in&nbsp;the&nbsp;given&nbsp;app&nbsp;label.<br>
+Use&nbsp;similar&nbsp;logic&nbsp;as&nbsp;<a href="#CustomUser-has_perm">has_perm</a>(),&nbsp;above.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-has_perm"><strong>has_perm</strong></a>(self, perm, obj=None)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;user&nbsp;has&nbsp;the&nbsp;specified&nbsp;permission.&nbsp;Query&nbsp;all<br>
+available&nbsp;auth&nbsp;backends,&nbsp;but&nbsp;return&nbsp;immediately&nbsp;if&nbsp;any&nbsp;backend&nbsp;returns<br>
+True.&nbsp;Thus,&nbsp;a&nbsp;user&nbsp;who&nbsp;has&nbsp;permission&nbsp;from&nbsp;a&nbsp;single&nbsp;auth&nbsp;backend&nbsp;is<br>
+assumed&nbsp;to&nbsp;have&nbsp;permission&nbsp;in&nbsp;general.&nbsp;If&nbsp;an&nbsp;object&nbsp;is&nbsp;provided,&nbsp;check<br>
+permissions&nbsp;for&nbsp;that&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-has_perms"><strong>has_perms</strong></a>(self, perm_list, obj=None)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;user&nbsp;has&nbsp;each&nbsp;of&nbsp;the&nbsp;specified&nbsp;permissions.&nbsp;If<br>
+object&nbsp;is&nbsp;passed,&nbsp;check&nbsp;if&nbsp;the&nbsp;user&nbsp;has&nbsp;all&nbsp;required&nbsp;perms&nbsp;for&nbsp;it.</tt></dd></dl>
+
+<strong>is_superuser</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="CustomUser-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="CustomUser-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="CustomUser-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="CustomUser-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#CustomUser-clean_fields">clean_fields</a>(),&nbsp;<a href="#CustomUser-clean">clean</a>(),&nbsp;and&nbsp;<a href="#CustomUser-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="CustomUser-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="CustomUser-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="CustomUser-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="CustomUser-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="CustomUser-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Profile">class <strong>Profile</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Profile">Profile</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#Profile">Profile</a>(id,&nbsp;user,&nbsp;pic,&nbsp;bio,&nbsp;licencecopy,&nbsp;idimg)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="main.models.html#Profile">Profile</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Profile-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>bio</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>idimg</strong></dt>
+<dd><tt>Just&nbsp;like&nbsp;the&nbsp;FileDescriptor,&nbsp;but&nbsp;for&nbsp;ImageFields.&nbsp;The&nbsp;only&nbsp;difference&nbsp;is<br>
+assigning&nbsp;the&nbsp;width/height&nbsp;to&nbsp;the&nbsp;width_field/height_field,&nbsp;if&nbsp;appropriate.</tt></dd>
+</dl>
+<dl><dt><strong>licencecopy</strong></dt>
+<dd><tt>The&nbsp;descriptor&nbsp;for&nbsp;the&nbsp;file&nbsp;attribute&nbsp;on&nbsp;the&nbsp;model&nbsp;instance.&nbsp;Return&nbsp;a<br>
+FieldFile&nbsp;when&nbsp;accessed&nbsp;so&nbsp;you&nbsp;can&nbsp;write&nbsp;code&nbsp;like::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;myapp.models&nbsp;import&nbsp;MyModel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;instance&nbsp;=&nbsp;MyModel.objects.get(pk=1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;instance.file.size<br>
+&nbsp;<br>
+Assign&nbsp;a&nbsp;file&nbsp;object&nbsp;on&nbsp;assignment&nbsp;so&nbsp;you&nbsp;can&nbsp;do::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;with&nbsp;open('/path/to/hello.world')&nbsp;as&nbsp;f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance.file&nbsp;=&nbsp;File(f)</tt></dd>
+</dl>
+<dl><dt><strong>pic</strong></dt>
+<dd><tt>Just&nbsp;like&nbsp;the&nbsp;FileDescriptor,&nbsp;but&nbsp;for&nbsp;ImageFields.&nbsp;The&nbsp;only&nbsp;difference&nbsp;is<br>
+assigning&nbsp;the&nbsp;width/height&nbsp;to&nbsp;the&nbsp;width_field/height_field,&nbsp;if&nbsp;appropriate.</tt></dd>
+</dl>
+<dl><dt><strong>user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;one-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Restaurant(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;place&nbsp;=&nbsp;OneToOneField(Place,&nbsp;related_name='restaurant')<br>
+&nbsp;<br>
+``Restaurant.place``&nbsp;is&nbsp;a&nbsp;``ForwardOneToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>user_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'main.models.Profile.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'main.models.Profile.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Profile-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Profile-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Profile-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Profile-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Profile-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Profile-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Profile-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Profile-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#Profile-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="Profile-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Profile-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="Profile-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="Profile-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#Profile-clean_fields">clean_fields</a>(),&nbsp;<a href="#Profile-clean">clean</a>(),&nbsp;and&nbsp;<a href="#Profile-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Profile-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Profile-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="Profile-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Profile-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Profile-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="Profile-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Profile-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="Profile-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Profile-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Profile-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>role</strong> = (('Producer', 'Producer'), ('Buyer', 'Buyer'), ('Transport-Provider', 'Transport-Provider'), ('empty', 'empty'), ('Price_teller', 'Price_teller'))</td></tr></table>
+</body></html>

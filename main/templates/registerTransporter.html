@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Registration Form For Transporter </h1>
+    <form method="POST" enctype ='multipart/form-data' action="{% url 'register_transplorter' %}" >
+        {% csrf_token %}
+        {% if form1.errors%}
+
+        {{err2}}
+        {{err1}}
+
+        {%endif%}
+
+        <div class="form-row mg-5">
+            <div class="col">
+                <input type="text" name = "phone" class="form-control" placeholder="phone">
+              
+              </div>
+
+            <div class="col">
+                <input type="text" name = "username" class="form-control" placeholder="username">
+              </div>
+            <div class="col">
+              <input type="text" name = "first_name" class="form-control" placeholder="first_name">
+            </div>
+            <div class="col">
+              <input type="text" name = "last_name" class="form-control" placeholder="last_name">
+            </div>
+
+            <div class="col">
+                <input type="text" name="Email_Adress"class="form-control" placeholder="Email Adress">
+              </div>
+
+              <div class="col">
+                <input type="password" name="password" class="form-control" placeholder="Password ">
+              </div>
+
+              <!-- <div class="col"> -->
+                <!-- <input type="text" name="password2" class="form-control" placeholder="Password Confirm "> -->
+              <!-- </div> -->
+
+              
+
+              <div class="col">
+                <input type="hidden"  name="type" class="form-control" value="transporter">
+              </div>
+
+              <div class="col">
+                <input type="text"  name="Adress" class="form-control" placeholder="Adress Location ">
+              </div>
+
+
+
+              
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Profile Picture </span>
+                </div>
+                <div class="custom-file">
+                  <input type="file"  name="pic" class="custom-file-input" accept="image/*" id="inputGroupFile01">
+                </div>
+              </div>
+
+
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Bio/About You </span>
+                </div>
+                <textarea class="form-control" name ='bio' aria-label="With textarea"></textarea>
+              </div>
+
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Upload Your id image</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file"  name="idimg" class="custom-file-input" accept="image/*" id="inputGroupFile01">
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                </div>
+                <select class="custom-select" name="Transporter_type">
+                    <option selected>indivisual</option>
+                    <option value="company">company</option>    
+                    <option value="other">other</option>  
+                </select>
+              </div>
+
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Upload Your Liscence Copy File</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file"  name="licencecopy" class="custom-file-input"  id="inputGroupFile01">
+                </div>
+              </div>
+          </div>
+
+        <!-- {{form1.as_p}} -->
+        <!-- {{form2.as_p}} -->
+
+        
+        <input type="submit" name="register"></input>
+
+    </form>
+</div>
+
+################################################
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+    {% endblock content %}

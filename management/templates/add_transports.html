@@ -1,0 +1,88 @@
+{% extends 'base copy.html' %}
+{% load static%}
+    {%block content%}
+
+
+    <div class="container" style="margin-top:100px;">
+      <div style="margin-left: 28%;"><a class="navbar-brand ml-5" href="#"><h2>Add  <em>Transport Options</em></h2></a></div>
+
+      {% for message in messages %}
+
+                {% if message.success %}
+                <div class="alert alert-danger fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                {%endif%}
+                <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                {%endfor%}
+
+
+
+                <form method="POST" enctype ="multipart/form-data"  action ="{% url 'transport_add' %}">
+                    {%csrf_token%}
+                 
+
+
+
+                    <input type="hidden" class="form-control" name='user' value ={{request.user.id}} placeholder="Product name">
+                    <div class="row">
+
+     
+
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input name="transport_name" type="text" class="form-control" id="name" placeholder="name" required="">
+         
+        </fieldset>
+      </div>
+     
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input name="specific_adress" type="text" class="form-control" id="email" placeholder="specific_adress" required="">
+        </fieldset>
+      </div>
+      
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input type="number" class="form-control" name='price' min='1' placeholder="price Greter than 1 per Km" required>
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <div class="input-group-prepend mb-2">
+          <span class="input-group-text">Upload  Image</span>
+        </div>
+        <fieldset>
+          <input type="file" name ='transport_image' class="form-control" name="pic" accept="image/*" id="id_pic">
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <textarea name="description" rows="6" class="form-control" id="message" placeholder="Your description" required=""></textarea>
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 ml-5 mb-3 mr-5 " style="float: right !important;">
+        <fieldset>
+          <button type ="submit" class = "btn btn-lg btn-secondary">Add Transport Options</button>
+        </fieldset>
+      </div>
+
+    </div>
+  </form>
+
+  
+    
+         
+              
+
+  {%endblock%}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class="container" style="margin-top: 100px;">
+
+    {% for message in messages %}
+
+    {% if message.success %}
+    <div class="alert alert-danger fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" style="font-size:20px">×</span>
+      </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+    </div>
+    {%endif%}
+    <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" style="font-size:20px">×</span>
+      </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+    </div>
+    
+      
+
+{% endfor %}
+    <form method="POST" action="{% url 'vertifyaccount' %}">
+        {% csrf_token %}
+    {{form.as_p}}
+    <button>Vertify</button>
+</form>
+</div>
+{% endblock %}

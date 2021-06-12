@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+   
+
+
+
+
+    
+
+ <div class="container mt-3">
+  <!-- <h3 class="h3">shopping Demo-8 </h3> -->
+  <div class="row">
+    {% for item in product%}
+      <div class="col-md-4 col-sm-6 mb-5 carrd">
+          <div class="product-grid8">
+              <div class="product-image8">
+                  <a href="#"  class="picc">
+                      <img class="pic-1" height='100' src="{{item.product_image.url}}">
+                      <img class="pic-2" src="{{item.product_image.url}}">
+                  </a>
+                  <!-- <ul class="social">
+                      <li><img src ="{% static 'images/shopping-bag (1).png' %} "></img></li>
+                      <li><a href="" class="fa fa-shopping-bag"></a></li>
+                      <li><a href="" class="fa fa-shopping-cart"></a></li>
+                  </ul> -->
+                  <span class="product-discount-label">{{item.amount}}</span>
+              </div>
+              <div class="product-content" style="height: 10px i !important;">
+                  <div class="price">{{item.price}} Birr
+                      <span>discount</span>
+                  </div>
+                  <span class="product-shipping">{{item.product_name}}</span>
+                
+                    <h3 class="title" >{{item.description}}</h3>
+                  
+                  
+                  <a class="all-deals" href="{{ item.get_absloute_url }}">See all deals <i class="fa fa-angle-right icon"></i></a>
+              </div>
+          </div>
+      </div>
+      {%endfor%}
+
+  </div>
+</div>
+<hr>
+
+        
+    </div>
+    </div>
+    <hr>
+    {% endblock %}

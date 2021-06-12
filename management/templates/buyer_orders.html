@@ -1,0 +1,74 @@
+{% extends 'base copy.html' %}
+{% load static%}
+    {%block content%}
+
+
+    <div class="container" style="margin-top:100px;">
+
+      {% for message in messages %}
+
+                {% if message.success %}
+                <div class="alert alert-danger fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                {%endif%}
+                <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                
+                  
+
+    {% endfor %}
+
+    <h2 style="color: limegreen;margin-bottom: 50px;margin-left: 28%;">You have Ordered
+      
+      {% if order%}
+      {{order}}
+      {%else%}
+         No
+      {%endif%}      
+      products </h2>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"> Product Image</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Product Owner</th>
+          <th scope="col">status</th>
+          <th scope="col">Delete</th>
+          
+          
+
+        </tr>
+      </thead>
+
+     
+      <tbody>
+        {%for pr in orders%}
+        <tr>
+    
+          <td><img style = 'width: 50px;height:auto;' src='{{pr.ordered_item.product_image.url}}'>  </img></td>
+          <td>{{pr.ordered_item}}</td>
+          <td>{{pr.ordered_item.price}} $</td>
+          <td>{{pr.prouct_owner}}</td>
+          {%if pr.accecpted%}
+          <td><a href="#" class="btn btn-success">Accepted</a></td>
+          {%else%}
+          <td><a href="#" class="btn btn-danger">Pending</a></td>
+          {%endif%}
+          <td><a href="{% url 'delete_orders' pr.pk %}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {%endfor%}
+      </tbody>
+     
+
+    </table>
+
+
+    {%endblock%}

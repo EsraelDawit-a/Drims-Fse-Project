@@ -1,0 +1,244 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Drims Web Systems</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor2/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' }">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+<!--
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/update.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/product_detail_view.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'bootstrap-4.0.0-dist/css/bootstrap.min.css' %}">
+
+
+
+    
+
+
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  </head>
+
+  <body>
+  </head>
+  <style>
+    body {
+      background-color:  #f5f6fa;
+      padding-top: 2px !important;
+    }
+    
+  </style>
+  <body>
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'homepage' %}"><h2>Drims <em>Systems</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>  -->
+            
+             
+              {%if request.user.is_authenticated%}
+                
+           <li class="nav-item">
+            
+            <a class="nav-link" href = "{% url 'logoutuser' %}" >Logout</a>
+          
+           
+          </li>
+              
+             {%if request.user.phone_vertified%}
+             <li class="nav-item">
+              <a class="nav-link" href="{% url 'profile_detail' %}">My Profile </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'user_products' %}">Dash Board</a>
+            </li>
+           
+              {%if request.user.role == "Producer" %}
+              <li class="nav-item">
+              <a class="nav-link" href="{% url 'create_product' %}">create product</a>
+            </li>
+            
+           
+              {%endif%}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'display_transports' %} ">Transport</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'wantedproductlist' %}">wanted</a>
+            </li>
+          </li>
+            
+             
+             
+           
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+            </li>
+           
+                 {%else%}
+                 <li class="nav-item">
+                  <a class="nav-link" href="#">Vertify Your Account</a>
+                </li>
+             {%endif%}
+              
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Products</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+              </li>
+             
+                 
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'loginuser' %}">Sign in</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'registercustomer' %}">Sign up</a>
+              </li>
+              <li class="nav-item">
+              
+                <a class="nav-link" href = "{% url 'wantedproductlist' %}" >wanted</a>
+              
+                
+              {%endif%}
+            
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    {% block content %}
+    
+    
+    {%endblock%}
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2020 Drims Systems, Ltd.
+            
+            - Design: <a rel="nofollow noopener" href="#" target="_blank">DRIMS TEAM</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor2/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor2/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+
+
+    <script> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap-4.0.0-dist/js/bootstrap.min.js' %}"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  
+  <script>
+
+
+    function showUserDetails(latitude, longitude) {
+     var position = latitude + "," + longitude;
+
+     $("#latitude").text(latitude);
+     $("#longitude").text(longitude);
+
+     var url = "https://www.google.com/maps/embed/v1/view?center="+position+"&zoom=12&key=AIzaSyBV3egn_bVaZbpvJFZOLCV6cnLZxNb7JY4";
+     $("iframe").attr('src', url);
+
+     // if (typeof additional != "undefined") {
+     //     $("#country").text(additional.country.name);
+     //     $("#city").text(additional.city.name);
+     //     $("#continent").text(additional.continent.name);
+     // }
+ }
+
+</script>
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzNU1VB03pjSOh57GnMl7Og5IZYXFhG08&callback=initMap&libraries=&v=weekly"
+async></script>
+<!-- <script>
+       
+    var x = document.getElementById('loc')
+
+$(document).ready(function () {
+     if ("geolocation" in navigator) {
+         navigator.geolocation.getCurrentPosition(function (p) {
+             x = (p.coords.latitude+','+p.coords.longitude);
+             document.getElementById('loc').value =x;
+             console.log(x)
+         }, function (e) {
+             alert("Loctaion Not Taken");
+         });
+     } else
+         ipLookup();
+ });
+
+
+   </script> -->
+  </body>
+</html>

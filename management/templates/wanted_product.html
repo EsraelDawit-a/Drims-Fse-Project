@@ -1,0 +1,94 @@
+{% extends 'base copy.html' %}
+{%block content%}
+<div id="preloader">
+  <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-top: 150px">
+   
+  <div style="margin-left: 28%;"><a class="navbar-brand ml-5" href="#"><h2>Add  <em>Product</em></h2></a></div>
+    <form method="POST" enctype ='multipart/form-data' action="{% url 'add_wanted_product' %}">
+      {% csrf_token %}
+     
+   
+
+      {% for message in messages %}
+      <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true" style="font-size:20px">×</span>
+         </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+       </div>
+        
+  
+      {% endfor %}
+    <input type="hidden" class="form-control" name='user' value ={{request.user.id}} placeholder="Product name">
+    <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+
+         <label>Amount</label>
+            <select class="custom-select mr-sm-2" name="amount_need" required="" id="id_amount_need">
+            <option value="" selected="">---------</option>
+          
+            <option value="single">single</option>
+          
+            <option value="many">many</option>
+          
+            <option value="unknown">unknown</option>
+          
+          </select>
+     </div>
+     
+
+
+    
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input name="product_name" type="text" class="form-control" id="name" placeholder="product_name" required="">
+         
+        </fieldset>
+      </div>
+     
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input name="specific_adress" type="text" class="form-control" id="email" placeholder="specific_adress" required="">
+        </fieldset>
+      </div>
+      
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <input type="text" class="form-control" name='price_range' min='1' placeholder="price_range" required>
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 ml-5 mb-3 mr-5">
+        <div class="input-group-prepend mb-2">
+          <span class="input-group-text">Upload Product Image</span>
+        </div>
+        <fieldset>
+          <input type="file" name ='product_image' class="form-control" name="pic" accept="image/*" id="id_pic">
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 ml-5 mb-3 mr-5">
+        <fieldset>
+          <textarea name="description" rows="6" class="form-control" id="message" placeholder="Your description" required=""></textarea>
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12 ml-5 mb-3 mr-5 " style="float: right !important;">
+        <fieldset>
+          <button type="submit" id="form-submit" class="filled-button btn btn-secondary">Add Product</button>
+        </fieldset>
+      </div>
+
+    </div>
+  </form>
+  </div>
+{%endblock%}

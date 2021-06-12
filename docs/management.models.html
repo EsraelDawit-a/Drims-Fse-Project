@@ -1,0 +1,1338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module management.models</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="management.html"><font color="#ffffff">management</font></a>.models</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cesrael%5Cdesktop%5Cproject%5Ctest2%5Cmanagement%5Cmodels.py">c:\users\esrael\desktop\project\test2\management\models.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="django.db.models.html">django.db.models</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="django.db.models.base.html#Model">django.db.models.base.Model</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="management.models.html#CommentReview">CommentReview</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#Message">Message</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#ProductCatagory">ProductCatagory</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#ProductOrders">ProductOrders</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#Products">Products</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#TransportOrders">TransportOrders</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#Transports">Transports</a>
+</font></dt><dt><font face="helvetica, arial"><a href="management.models.html#WantedProducts">WantedProducts</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CommentReview">class <strong>CommentReview</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#CommentReview">CommentReview</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#CommentReview">CommentReview</a>(id,&nbsp;commetned_by,&nbsp;comment,&nbsp;product_id,&nbsp;commented_date)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#CommentReview">CommentReview</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="CommentReview-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>comment</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>commented_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="CommentReview-get_next_by_commented_date"><strong>get_next_by_commented_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: commented_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="CommentReview-get_previous_by_commented_date"><strong>get_previous_by_commented_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: commented_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>product_id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>commetned_by</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>commetned_by_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.CommentReview.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.CommentReview.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="CommentReview-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="CommentReview-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#CommentReview-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="CommentReview-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="CommentReview-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#CommentReview-clean_fields">clean_fields</a>(),&nbsp;<a href="#CommentReview-clean">clean</a>(),&nbsp;and&nbsp;<a href="#CommentReview-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="CommentReview-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="CommentReview-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="CommentReview-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="CommentReview-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="CommentReview-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Message">class <strong>Message</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Message">Message</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#Message">Message</a>(id,&nbsp;user,&nbsp;full_name,&nbsp;email,&nbsp;subject,&nbsp;message)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#Message">Message</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Message-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>email</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>full_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>message</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>subject</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>user_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.Message.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.Message.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Message-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Message-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Message-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Message-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Message-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Message-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Message-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Message-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#Message-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="Message-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Message-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="Message-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="Message-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#Message-clean_fields">clean_fields</a>(),&nbsp;<a href="#Message-clean">clean</a>(),&nbsp;and&nbsp;<a href="#Message-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Message-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Message-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="Message-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Message-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Message-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="Message-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Message-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="Message-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Message-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Message-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ProductCatagory">class <strong>ProductCatagory</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ProductCatagory">ProductCatagory</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#ProductCatagory">ProductCatagory</a>(id,&nbsp;name)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#ProductCatagory">ProductCatagory</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ProductCatagory-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>productprice_set</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>products_set</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.ProductCatagory.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.ProductCatagory.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="ProductCatagory-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="ProductCatagory-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#ProductCatagory-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="ProductCatagory-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="ProductCatagory-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#ProductCatagory-clean_fields">clean_fields</a>(),&nbsp;<a href="#ProductCatagory-clean">clean</a>(),&nbsp;and&nbsp;<a href="#ProductCatagory-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="ProductCatagory-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ProductCatagory-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="ProductCatagory-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="ProductCatagory-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="ProductCatagory-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ProductOrders">class <strong>ProductOrders</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ProductOrders">ProductOrders</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#ProductOrders">ProductOrders</a>(id,&nbsp;ordered_item,&nbsp;ordered_by,&nbsp;prouct_owner,&nbsp;order_date,&nbsp;order_destination,&nbsp;order_source_adress,&nbsp;orderer_optional_adress,&nbsp;accecpted)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#ProductOrders">ProductOrders</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ProductOrders-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>accecpted</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="ProductOrders-get_next_by_order_date"><strong>get_next_by_order_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: order_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="ProductOrders-get_previous_by_order_date"><strong>get_previous_by_order_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: order_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>order_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>order_destination</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>order_source_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>orderer_optional_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>ordered_by</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>ordered_by_id</strong></dt>
+</dl>
+<dl><dt><strong>ordered_item</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>ordered_item_id</strong></dt>
+</dl>
+<dl><dt><strong>prouct_owner</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>prouct_owner_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.ProductOrders.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.ProductOrders.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="ProductOrders-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="ProductOrders-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#ProductOrders-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="ProductOrders-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="ProductOrders-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#ProductOrders-clean_fields">clean_fields</a>(),&nbsp;<a href="#ProductOrders-clean">clean</a>(),&nbsp;and&nbsp;<a href="#ProductOrders-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="ProductOrders-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ProductOrders-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="ProductOrders-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="ProductOrders-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="ProductOrders-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Products">class <strong>Products</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Products">Products</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#Products">Products</a>(id,&nbsp;user,&nbsp;product_name,&nbsp;catagory,&nbsp;description,&nbsp;product_image,&nbsp;post_date,&nbsp;amount,&nbsp;specific_adress,&nbsp;price)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#Products">Products</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Products-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>amount</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>description</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="Products-get_absloute_url"><strong>get_absloute_url</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Products-get_amount_display"><strong>get_amount_display</strong></a> = _method(self, *, field=&lt;django.db.models.fields.CharField: amount&gt;)</dt></dl>
+
+<dl><dt><a name="Products-get_next_by_post_date"><strong>get_next_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="Products-get_previous_by_post_date"><strong>get_previous_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>post_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>price</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>product_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>specific_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>catagory</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>catagory_id</strong></dt>
+</dl>
+<dl><dt><strong>ordered_product</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>product_image</strong></dt>
+<dd><tt>Just&nbsp;like&nbsp;the&nbsp;FileDescriptor,&nbsp;but&nbsp;for&nbsp;ImageFields.&nbsp;The&nbsp;only&nbsp;difference&nbsp;is<br>
+assigning&nbsp;the&nbsp;width/height&nbsp;to&nbsp;the&nbsp;width_field/height_field,&nbsp;if&nbsp;appropriate.</tt></dd>
+</dl>
+<dl><dt><strong>user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>user_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.Products.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.Products.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Products-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Products-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Products-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Products-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Products-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Products-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Products-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Products-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#Products-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="Products-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Products-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="Products-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="Products-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#Products-clean_fields">clean_fields</a>(),&nbsp;<a href="#Products-clean">clean</a>(),&nbsp;and&nbsp;<a href="#Products-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Products-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Products-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="Products-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Products-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Products-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="Products-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Products-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="Products-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Products-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Products-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TransportOrders">class <strong>TransportOrders</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#TransportOrders">TransportOrders</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#TransportOrders">TransportOrders</a>(id,&nbsp;transport,&nbsp;ordered_by,&nbsp;transport_owner,&nbsp;order_date,&nbsp;message,&nbsp;order_source_adress,&nbsp;orderer_optional_adress,&nbsp;status)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#TransportOrders">TransportOrders</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TransportOrders-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-get_next_by_order_date"><strong>get_next_by_order_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: order_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="TransportOrders-get_previous_by_order_date"><strong>get_previous_by_order_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: order_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>message</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>order_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>order_source_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>orderer_optional_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>status</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>ordered_by</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>ordered_by_id</strong></dt>
+</dl>
+<dl><dt><strong>transport</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>transport_id</strong></dt>
+</dl>
+<dl><dt><strong>transport_owner</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>transport_owner_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.TransportOrders.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.TransportOrders.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="TransportOrders-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="TransportOrders-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#TransportOrders-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="TransportOrders-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="TransportOrders-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#TransportOrders-clean_fields">clean_fields</a>(),&nbsp;<a href="#TransportOrders-clean">clean</a>(),&nbsp;and&nbsp;<a href="#TransportOrders-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="TransportOrders-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="TransportOrders-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="TransportOrders-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="TransportOrders-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="TransportOrders-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Transports">class <strong>Transports</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Transports">Transports</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#Transports">Transports</a>(id,&nbsp;user,&nbsp;transport_name,&nbsp;description,&nbsp;transport_image,&nbsp;post_date,&nbsp;specific_adress,&nbsp;price)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#Transports">Transports</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Transports-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>description</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="Transports-get_absloute_url"><strong>get_absloute_url</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Transports-get_next_by_post_date"><strong>get_next_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="Transports-get_previous_by_post_date"><strong>get_previous_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>post_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>price</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>specific_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>transport_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>transport</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;objects&nbsp;manager&nbsp;on&nbsp;the&nbsp;reverse&nbsp;side&nbsp;of&nbsp;a<br>
+many-to-one&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Parent.children``&nbsp;is&nbsp;a&nbsp;``ReverseManyToOneDescriptor``&nbsp;instance.<br>
+&nbsp;<br>
+Most&nbsp;of&nbsp;the&nbsp;implementation&nbsp;is&nbsp;delegated&nbsp;to&nbsp;a&nbsp;dynamically&nbsp;defined&nbsp;manager<br>
+class&nbsp;built&nbsp;by&nbsp;``create_forward_many_to_many_manager()``&nbsp;defined&nbsp;below.</tt></dd>
+</dl>
+<dl><dt><strong>transport_image</strong></dt>
+<dd><tt>Just&nbsp;like&nbsp;the&nbsp;FileDescriptor,&nbsp;but&nbsp;for&nbsp;ImageFields.&nbsp;The&nbsp;only&nbsp;difference&nbsp;is<br>
+assigning&nbsp;the&nbsp;width/height&nbsp;to&nbsp;the&nbsp;width_field/height_field,&nbsp;if&nbsp;appropriate.</tt></dd>
+</dl>
+<dl><dt><strong>user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>user_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.Transports.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.Transports.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Transports-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Transports-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Transports-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Transports-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Transports-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="Transports-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Transports-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Transports-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#Transports-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="Transports-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Transports-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="Transports-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="Transports-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#Transports-clean_fields">clean_fields</a>(),&nbsp;<a href="#Transports-clean">clean</a>(),&nbsp;and&nbsp;<a href="#Transports-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="Transports-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Transports-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="Transports-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Transports-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Transports-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="Transports-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Transports-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="Transports-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="Transports-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Transports-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WantedProducts">class <strong>WantedProducts</strong></a>(<a href="django.db.models.base.html#Model">django.db.models.base.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#WantedProducts">WantedProducts</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#WantedProducts">WantedProducts</a>(id,&nbsp;user,&nbsp;product_name,&nbsp;description,&nbsp;product_image,&nbsp;post_date,&nbsp;amount_need,&nbsp;specific_adress,&nbsp;price_range,&nbsp;found)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="management.models.html#WantedProducts">WantedProducts</a></dd>
+<dd><a href="django.db.models.base.html#Model">django.db.models.base.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="WantedProducts-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<strong>amount_need</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>description</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>found</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<dl><dt><a name="WantedProducts-get_absloute_url"><strong>get_absloute_url</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="WantedProducts-get_amount_need_display"><strong>get_amount_need_display</strong></a> = _method(self, *, field=&lt;django.db.models.fields.CharField: amount_need&gt;)</dt></dl>
+
+<dl><dt><a name="WantedProducts-get_next_by_post_date"><strong>get_next_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=True, **kwargs)</dt></dl>
+
+<dl><dt><a name="WantedProducts-get_previous_by_post_date"><strong>get_previous_by_post_date</strong></a> = _method(self, *, field=&lt;django.db.models.fields.DateTimeField: post_date&gt;, is_next=False, **kwargs)</dt></dl>
+
+<strong>id</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>post_date</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>price_range</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>product_name</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<strong>specific_adress</strong> = &lt;django.db.models.query_utils.DeferredAttribute object&gt;
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>product_image</strong></dt>
+<dd><tt>Just&nbsp;like&nbsp;the&nbsp;FileDescriptor,&nbsp;but&nbsp;for&nbsp;ImageFields.&nbsp;The&nbsp;only&nbsp;difference&nbsp;is<br>
+assigning&nbsp;the&nbsp;width/height&nbsp;to&nbsp;the&nbsp;width_field/height_field,&nbsp;if&nbsp;appropriate.</tt></dd>
+</dl>
+<dl><dt><strong>user</strong></dt>
+<dd><tt>Accessor&nbsp;to&nbsp;the&nbsp;related&nbsp;object&nbsp;on&nbsp;the&nbsp;forward&nbsp;side&nbsp;of&nbsp;a&nbsp;many-to-one&nbsp;or<br>
+one-to-one&nbsp;(via&nbsp;ForwardOneToOneDescriptor&nbsp;subclass)&nbsp;relation.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Model):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent&nbsp;=&nbsp;ForeignKey(Parent,&nbsp;related_name='children')<br>
+&nbsp;<br>
+``Child.parent``&nbsp;is&nbsp;a&nbsp;``ForwardManyToOneDescriptor``&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>user_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'management.models.WantedProducts.DoesNotExist'&gt;</dl>
+
+<dl><dt><strong>MultipleObjectsReturned</strong> = &lt;class 'management.models.WantedProducts.MultipleObjectsReturned'&gt;</dl>
+
+<dl><dt><strong>objects</strong> = &lt;django.db.models.manager.Manager object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="WantedProducts-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__getstate__"><strong>__getstate__</strong></a>(self)</dt><dd><tt>Hook&nbsp;to&nbsp;allow&nbsp;choosing&nbsp;the&nbsp;attributes&nbsp;to&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="WantedProducts-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Hook&nbsp;for&nbsp;doing&nbsp;any&nbsp;extra&nbsp;model-wide&nbsp;validation&nbsp;after&nbsp;<a href="#WantedProducts-clean">clean</a>()&nbsp;has&nbsp;been<br>
+called&nbsp;on&nbsp;every&nbsp;field&nbsp;by&nbsp;self.<strong>clean_fields</strong>.&nbsp;Any&nbsp;ValidationError&nbsp;raised<br>
+by&nbsp;this&nbsp;method&nbsp;will&nbsp;not&nbsp;be&nbsp;associated&nbsp;with&nbsp;a&nbsp;particular&nbsp;field;&nbsp;it&nbsp;will<br>
+have&nbsp;a&nbsp;special-case&nbsp;association&nbsp;with&nbsp;the&nbsp;field&nbsp;defined&nbsp;by&nbsp;NON_FIELD_ERRORS.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-clean_fields"><strong>clean_fields</strong></a>(self, exclude=None)</dt><dd><tt>Clean&nbsp;all&nbsp;fields&nbsp;and&nbsp;raise&nbsp;a&nbsp;ValidationError&nbsp;containing&nbsp;a&nbsp;dict<br>
+of&nbsp;all&nbsp;validation&nbsp;errors&nbsp;if&nbsp;any&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-date_error_message"><strong>date_error_message</strong></a>(self, lookup_type, field_name, unique_for)</dt></dl>
+
+<dl><dt><a name="WantedProducts-delete"><strong>delete</strong></a>(self, using=None, keep_parents=False)</dt></dl>
+
+<dl><dt><a name="WantedProducts-full_clean"><strong>full_clean</strong></a>(self, exclude=None, validate_unique=True)</dt><dd><tt>Call&nbsp;<a href="#WantedProducts-clean_fields">clean_fields</a>(),&nbsp;<a href="#WantedProducts-clean">clean</a>(),&nbsp;and&nbsp;<a href="#WantedProducts-validate_unique">validate_unique</a>()&nbsp;on&nbsp;the&nbsp;model.<br>
+Raise&nbsp;a&nbsp;ValidationError&nbsp;for&nbsp;any&nbsp;errors&nbsp;that&nbsp;occur.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-get_deferred_fields"><strong>get_deferred_fields</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;containing&nbsp;names&nbsp;of&nbsp;deferred&nbsp;fields&nbsp;for&nbsp;this&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-prepare_database_save"><strong>prepare_database_save</strong></a>(self, field)</dt></dl>
+
+<dl><dt><a name="WantedProducts-refresh_from_db"><strong>refresh_from_db</strong></a>(self, using=None, fields=None)</dt><dd><tt>Reload&nbsp;field&nbsp;values&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;the&nbsp;reloading&nbsp;happens&nbsp;from&nbsp;the&nbsp;database&nbsp;this&nbsp;instance&nbsp;was<br>
+loaded&nbsp;from,&nbsp;or&nbsp;by&nbsp;the&nbsp;read&nbsp;router&nbsp;if&nbsp;this&nbsp;instance&nbsp;wasn't&nbsp;loaded&nbsp;from<br>
+any&nbsp;database.&nbsp;The&nbsp;using&nbsp;parameter&nbsp;will&nbsp;override&nbsp;the&nbsp;default.<br>
+&nbsp;<br>
+Fields&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;specify&nbsp;which&nbsp;fields&nbsp;to&nbsp;reload.&nbsp;The&nbsp;fields<br>
+should&nbsp;be&nbsp;an&nbsp;iterable&nbsp;of&nbsp;field&nbsp;attnames.&nbsp;If&nbsp;fields&nbsp;is&nbsp;None,&nbsp;then<br>
+all&nbsp;non-deferred&nbsp;fields&nbsp;are&nbsp;reloaded.<br>
+&nbsp;<br>
+When&nbsp;accessing&nbsp;deferred&nbsp;fields&nbsp;of&nbsp;an&nbsp;instance,&nbsp;the&nbsp;deferred&nbsp;loading<br>
+of&nbsp;the&nbsp;field&nbsp;will&nbsp;call&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-save"><strong>save</strong></a>(self, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Save&nbsp;the&nbsp;current&nbsp;instance.&nbsp;Override&nbsp;this&nbsp;in&nbsp;a&nbsp;subclass&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+control&nbsp;the&nbsp;saving&nbsp;process.<br>
+&nbsp;<br>
+The&nbsp;'force_insert'&nbsp;and&nbsp;'force_update'&nbsp;parameters&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;insist<br>
+that&nbsp;the&nbsp;"save"&nbsp;must&nbsp;be&nbsp;an&nbsp;SQL&nbsp;insert&nbsp;or&nbsp;update&nbsp;(or&nbsp;equivalent&nbsp;for<br>
+non-SQL&nbsp;backends),&nbsp;respectively.&nbsp;Normally,&nbsp;they&nbsp;should&nbsp;not&nbsp;be&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-save_base"><strong>save_base</strong></a>(self, raw=False, force_insert=False, force_update=False, using=None, update_fields=None)</dt><dd><tt>Handle&nbsp;the&nbsp;parts&nbsp;of&nbsp;saving&nbsp;which&nbsp;should&nbsp;be&nbsp;done&nbsp;only&nbsp;once&nbsp;per&nbsp;save,<br>
+yet&nbsp;need&nbsp;to&nbsp;be&nbsp;done&nbsp;in&nbsp;raw&nbsp;saves,&nbsp;too.&nbsp;This&nbsp;includes&nbsp;some&nbsp;sanity<br>
+checks&nbsp;and&nbsp;signal&nbsp;sending.<br>
+&nbsp;<br>
+The&nbsp;'raw'&nbsp;argument&nbsp;is&nbsp;telling&nbsp;save_base&nbsp;not&nbsp;to&nbsp;save&nbsp;any&nbsp;parent<br>
+models&nbsp;and&nbsp;not&nbsp;to&nbsp;do&nbsp;any&nbsp;changes&nbsp;to&nbsp;the&nbsp;values&nbsp;before&nbsp;save.&nbsp;This<br>
+is&nbsp;used&nbsp;by&nbsp;fixture&nbsp;loading.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-serializable_value"><strong>serializable_value</strong></a>(self, field_name)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;field&nbsp;name&nbsp;for&nbsp;this&nbsp;instance.&nbsp;If&nbsp;the&nbsp;field&nbsp;is<br>
+a&nbsp;foreign&nbsp;key,&nbsp;return&nbsp;the&nbsp;id&nbsp;value&nbsp;instead&nbsp;of&nbsp;the&nbsp;object.&nbsp;If&nbsp;there's<br>
+no&nbsp;Field&nbsp;object&nbsp;with&nbsp;this&nbsp;name&nbsp;on&nbsp;the&nbsp;model,&nbsp;return&nbsp;the&nbsp;model<br>
+attribute's&nbsp;value.<br>
+&nbsp;<br>
+Used&nbsp;to&nbsp;serialize&nbsp;a&nbsp;field's&nbsp;value&nbsp;(in&nbsp;the&nbsp;serializer,&nbsp;or&nbsp;form&nbsp;output,<br>
+for&nbsp;example).&nbsp;Normally,&nbsp;you&nbsp;would&nbsp;just&nbsp;access&nbsp;the&nbsp;attribute&nbsp;directly<br>
+and&nbsp;not&nbsp;use&nbsp;this&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="WantedProducts-unique_error_message"><strong>unique_error_message</strong></a>(self, model_class, unique_check)</dt></dl>
+
+<dl><dt><a name="WantedProducts-validate_unique"><strong>validate_unique</strong></a>(self, exclude=None)</dt><dd><tt>Check&nbsp;unique&nbsp;constraints&nbsp;on&nbsp;the&nbsp;model&nbsp;and&nbsp;raise&nbsp;ValidationError&nbsp;if&nbsp;any<br>
+failed.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><a name="WantedProducts-check"><strong>check</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="WantedProducts-from_db"><strong>from_db</strong></a>(db, field_names, values)<font color="#909090"><font face="helvetica, arial"> from <a href="django.db.models.base.html#ModelBase">django.db.models.base.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="django.db.models.base.html#Model">django.db.models.base.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>pk</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>need</strong> = (('single', 'single'), ('many', 'many'), ('unknown', 'unknown'))<br>
+<strong>sell_type</strong> = (('per single', 'persingle'), ('per pack', 'perpack'))</td></tr></table>
+</body></html>

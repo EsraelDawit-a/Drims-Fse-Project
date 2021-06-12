@@ -1,0 +1,310 @@
+{% extends 'base copy.html' %}
+{% load static%}
+    {%block content%}
+
+
+    <div class="container" style="margin-top:100px;">
+
+      {% for message in messages %}
+
+                {% if message.success %}
+                <div class="alert alert-danger fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                {%endif%}
+                <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+                </div>
+                
+                  
+
+    {% endfor %}
+    {% if request.user.role == "Producer" %}
+
+    <h2 style="color: limegreen;margin-bottom: 50px;margin-left: 28%;">You have
+      
+      {% if amount%}
+      {{amount}}
+      {%else%}
+         No
+      {%endif%}      
+      products </h2>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"> Product Image</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Delete</th>
+          <th scope="col">Edit</th>
+          
+
+        </tr>
+      </thead>
+
+      {% if amount%}
+      <tbody>
+        {%for pr in form%}
+        <tr>
+    
+          <td><img style = 'width: 50px;height:auto;' src='{{pr.product_image.url}}'>  </img></td>
+          <td>{{pr.product_name}}</td>
+          <td>{{pr.price}} $</td>
+          <td>{{pr.amount}}</td>
+          <td><a href="{% url  'delete' pr.pk %}" class="btn btn-danger">Delete</a></td>
+          <td><a href="{% url 'update_product' pr.pk %}" class="btn btn-warning">Edit</a></td>
+        </tr>
+        {%endfor%}
+      </tbody>
+      {%endif%}
+
+    </table>
+
+    {%if request.user.phone_vertified%}
+    <a  href="{% url 'create_product' %}" class="btn btn-outline-success">create_product</a>
+      {%else%}
+       <a  href="{% url 'create_product' %}" class="btn btn-outline-success disabled mb-3">create_product</a>
+
+       <ul style="color: lightslategrey;">Please Vertify Your Account To create_product<a href="#"> Vertify Account</a></ul>
+    {%endif%}
+  </div>
+
+ 
+<!-- Your Order Requests -->
+  <div class="container mt-5">
+
+  <h2 style="color: limegreen;margin-bottom: 50px;margin-left: 28%;">You have
+      
+    {% if order%}
+    {{order}}
+    {%else%}
+       No
+    {%endif%}      
+    Order Requests </h2>
+    
+
+     <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"> Product Image</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Ordered by</th>
+          <th scope="col">Ordered Date</th>
+          <th scope="col">Order Destination</th>
+          <th scope="col">Optional Adress</th>
+          <th scope="col">Status</th>
+          <th scope="col">Change Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in orders%}
+        <tr>
+          <td><img style = 'width: 50px;height:auto;' src='{{item.ordered_item.product_image.url}}'>  </img></td>
+          <td>{{item.ordered_item}}</td>
+          <td>{{item.ordered_by }}</td>
+          <td>{{item.order_date}}</td>
+          <td>{{item.order_destination}}</td>
+          <td>{{item.orderer_optional_adress}}</td>
+          <td>
+            {% if item.accecpted%}
+              Accepted
+            {%else%}
+              Pending
+            {%endif%}
+
+          </td>
+          <td>
+            
+            {% if item.accecpted%}
+            <a href="{% url 'change_status' item.pk %}" class="btn btn-danger"> Decline</a>
+             
+            {%else%}
+            <a href="{% url 'change_status' item.pk %}" class="btn btn-primary">Accept</a>
+            {%endif%}
+            </a>
+
+
+          </td>
+        </tr>
+        {%endfor%}
+        
+      </tbody>
+    </table>
+  </div>
+
+{%endif%}
+
+<!-- User Transport Orders -->
+{% if request.user.role == "Transport-Provider" %}
+<!-- User Transport List -->
+<a style="float: right;" href="{% url 'transport_add' %}" class="btn btn-lg btn-secondary">Add Transport</a>
+<h2 style="color: limegreen;margin-bottom: 50px;margin-left: 28%;margin-right: 15px;">You have
+      
+  {% if amount%}
+  {{amount}}
+  {%else%}
+     No
+  {%endif%}      
+  Transport Options Provided </h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"> Product Image</th>
+      <th scope="col">Transport Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Date Published</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Edit</th>
+      
+
+    </tr>
+  </thead>
+
+  {% if amount%}
+  <tbody>
+    {%for pr in transport%}
+    <tr>
+
+      <td><img style = 'width: 50px;height:auto;' src='{{pr.transport_image.url}}'>  </img></td>
+      <td>{{pr.transport_name}}</td>
+      <td>{{pr.price}} Per KM</td>
+      <td>{{pr.post_date}}</td>
+      <td><a href="{% url 'delete_transports' pr.pk%}" class="btn btn-danger">Delete</a></td>
+      <td><a href="{% url 'update_transport' pr.pk %}" class="btn btn-warning">Edit</a></td>
+    </tr>
+    {%endfor%}
+  </tbody>
+  {%endif%}
+
+</table>
+
+
+
+<!-- User Transport List Ends Here -->
+
+  
+  <div class="container mt-5">
+
+    <h2 style="color: limegreen;margin-bottom: 50px;margin-left: 20%;">You have
+        
+      {% if t_order%}
+      {{t_order}}
+      {%else%}
+         No
+      {%endif%}      
+     Transport  Order Requests </h2>
+      
+  
+       <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col"> Order Id</th>
+            <th scope="col"> Order Image</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Ordered by</th>
+            <th scope="col">Ordered Date</th>
+            <th scope="col">Order Destination</th>
+            <th scope="col">Optional Adress</th>
+            <th scope="col">Status</th>
+            <th scope="col">Change Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in t_orders%}
+          <tr>
+            <td>{{item.pk}}</td>
+            <td><img style = 'width: 50px;height:auto;' src='{{item.transport_image.url}}'>  </img></td>
+            <td>{{item.ordered_item}}</td>
+            <td>{{item.ordered_by }}</td>
+            <td>{{item.order_date}}</td>
+            <td>{{item.order_source_adress}}</td>
+            <td>{{item.orderer_optional_adress}}</td>
+            <td>
+              {% if item.status%}
+                Accepted
+              {%else%}
+                Pending
+              {%endif%}
+  
+            </td>
+            <td>
+              
+              {% if item.status%}
+              <a href="{% url 'change_status_transport' item.pk %}" class="btn btn-danger"> Decline</a>
+               
+              {%else%}
+              <a href="{% url 'change_status_transport' item.pk %}" class="btn btn-primary">Accept</a>
+              {%endif%}
+              </a>
+  
+  
+            </td>
+          </tr>
+          {%endfor%}
+  
+        </tbody>
+      </table>
+
+
+
+
+
+
+      
+    <h2 style="color: limegreen;margin-bottom: 50px;margin-left: 28%;">You have Ordered
+      
+      {% if my_order%}
+      {{my_order}}
+      {%else%}
+         No
+      {%endif%}      
+      products </h2>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"> Product Image</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Product Owner</th>
+          <th scope="col">status</th>
+          <th scope="col">Delete</th>
+          
+          
+
+        </tr>
+      </thead>
+
+     
+      <tbody>
+        {%for pr in my_orders%}
+        <tr>
+    
+          <td><img style = 'width: 50px;height:auto;' src='{{pr.ordered_item.product_image.url}}'>  </img></td>
+          <td>{{pr.ordered_item}}</td>
+          <td>{{pr.ordered_item.price}} $</td>
+          <td>{{pr.prouct_owner}}</td>
+          {%if pr.accecpted%}
+          <td><a href="#" class="btn btn-success">Accepted</a></td>
+          {%else%}
+          <td><a href="#" class="btn btn-danger">Pending</a></td>
+          {%endif%}
+          <td><a href="{% url 'delete_orders' pr.pk %}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {%endfor%}
+      </tbody>
+     
+
+    </table>
+
+    </div>
+
+    {%endif%}
+  {%endblock%}

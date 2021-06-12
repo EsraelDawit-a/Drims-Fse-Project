@@ -1,0 +1,146 @@
+{% extends 'base copy.html' %}
+{% load static%}
+    {%block content%}
+<!-- <div style="margin-top: 100px;">
+    <form method="POST" action="{% url 'update_product' pk %}">
+    {% csrf_token%}
+        {{form1.as_p}}
+        <button type="submit"> Update</button>
+    </form>
+</div> -->
+
+    <form method="POST" enctype ='multipart/form-data' action="{% url 'update_product' pk %}" >
+        {% csrf_token %}
+<div  style="background-color: #f5f6fa; margin:100px !important;">
+    <div class="container mt-5" style="box-shadow:0 0 10px rgba(0,0,0,.15)">
+        <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="account-settings">
+                    <div class="user-profile">
+                        
+                            
+                                <img height="300" width = "auto" class="p-3"  src="{{product.product_image.url}}" alt="{{request.user.first_name}} {{request.user.last_name}}">
+                            
+                            
+                        <h5 class="user-name">{{product.product_name}}</h5>
+                        <h6 class="user-email">{{product.user.username}}</h6>
+                        <a href="{{product.product_image.url}}">Image Link</a>
+                    </div>
+                    <div class="about">
+                        <h5>About</h5>
+                        <p>{{product.description}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h6 class="mb-2 text-primary">Prouduct Details</h6>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <input type="hidden" name="user" class="form-control" id="website" value="{{request.user.pk}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Product Name</label>
+                            <input type="text" class="form-control" id="fullName" name ="product_name"  value="{{product.product_name}}">
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="phone">Amount</label>
+                            <select name="amount" class="custom-select mr-sm-2" required="" id="id_catagory">
+                                <option value="">---------</option>
+                              
+                                <option value="per single">persingle</option>
+                              
+                                <option value="per pack" selected="">perpack</option>
+                              
+                              </select>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">catagory</label>
+                 
+                    
+                    <select name="catagory"  selected ='' class="custom-select mr-sm-2" required="" id="id_catagory">
+                      {% for item in cat%}
+                           <option value="{{item.id}}">{{item}}</option>
+          
+                    {%endfor%}n>
+                    
+                    </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="website">Specific Adress</label>
+                            <input type="text" name="specific_adress" class="form-control" id="website" value="{{product.specific_adress}}">
+                        </div>
+                    </div>
+                   
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="website">Price</label>
+                            <input   class="custom-select mr-sm-2"  name="price"  min="1.0" value = "{{product.price}}" required="" id="id_price">
+                        </div>
+                    </div>
+                 
+
+                    
+
+                </div>
+                <div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h6 class="mt-3 mb-2 text-primary">Other Info</h6>
+                    </div>
+
+                
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="sTate">Product Image </label>
+                            <!-- <input type="text" class="form-control" id="sTate" placeholder="Enter State"> -->
+                            <input type="file" class="form-control" name="product_image" accept="image/*" id="id_pic">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="zIp">Product Description</label>
+                            <!-- <input type="text" class="form-control" id="zIp" placeholder="Zip Code"> -->
+                            <textarea name="description" class="form-control" value="{{product.description}}"  cols="20" rows="1" id="id_bio"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="text-right">
+                            <a href="{% url 'homepage' %}" class="btn btn-secondary">Home</a>
+                            <button type ="submit"  name="submit" class="btn btn-primary">Update Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    </form>    
+
+{%endblock%}

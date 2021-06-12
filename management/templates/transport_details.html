@@ -1,0 +1,61 @@
+{% extends 'base copy.html' %}
+{% load static %}
+    {%block content%}
+    <div id="preloader">
+      <div class="jumper">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 100px;">
+    {% for message in messages %}
+    <div class="alert alert-success fade in alert-dismissible show mr-5 ml-5 mt-2" style="margin-top:18px;">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true" style="font-size:20px">×</span>
+       </button>   <strong>Dear {{request.user}} </strong> {{ message }}.
+     </div>
+      
+
+    {% endfor %}
+
+</div>
+    
+    
+    
+    
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Details </h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Looking for the best Transport Options ?</h4>
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">Try This Option</a> Contact With Transport Provider Make Your Orders Simple And Fast .</p>
+              <ul class="featured-list">
+                <li><a href="#">Name: {{item.transport_name}}</a></li>
+                <li><a href="#">Provider: {{item.user.username}}</a></li>
+                <li><a href="#">Posted :{{item.post_date|timesince}} ago</a></li>
+                <li><a href="#">Adress: {{item.specific_adress}}</a></li>
+                <li><a href="#">Price : {{item.price}} per KM</a></li>
+                <p style="color: rgb(131, 59, 74);">{{item.description}}</p>
+              </ul>
+              <a href="{% url 'order_Transport' item.pk %}" class="filled-button">Request For Order Now</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="{{ item.transport_image.url }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    {%endblock%}

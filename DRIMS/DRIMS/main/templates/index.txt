@@ -1,0 +1,30 @@
+BEGIN;
+--
+-- Create model CustomUser
+--
+CREATE TABLE "main_customuser" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(150) NOT NULL, "last_name" varchar(150) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "phone" varchar(100) NOT NULL, "registerddate" datetime NOT NULL, "is_banned" bool NOT NULL, "Email_Adress" varchar(1000) NOT NULL, "type" varchar(100) NOT NULL);
+CREATE TABLE "main_customuser_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" integer NOT NULL REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE TABLE "main_customuser_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" integer NOT NULL REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model Transporter
+--
+CREATE TABLE "main_transporter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "producttype" varchar(100) NOT NULL, "Transporter_type" varchar(100) NOT NULL, "pic" varchar(100) NULL, "Adress" varchar(200) NOT NULL, "bio" text NULL, "idimg" varchar(100) NULL, "licencecopy" varchar(100) NOT NULL, "is_vertified" bool NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model Seller
+--
+CREATE TABLE "main_seller" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "producttype" varchar(100) NULL, "Sellertype" varchar(100) NOT NULL, "pic" varchar(100) NULL, "Adress" varchar(200) NOT NULL, "bio" text NULL, "docimage" varchar(100) NULL, "is_vertified" bool NOT NULL, "is_premium_account" bool NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model Buyer
+--
+CREATE TABLE "main_buyer" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "pic" varchar(100) NULL, "Adress" varchar(200) NOT NULL, "bio" text NULL, "role" varchar(100) NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model BranchAdminRegistration
+--
+CREATE TABLE "main_branchadminregistration" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "idimg" varchar(100) NULL, "licencecopy" varchar(100) NOT NULL, "is_vertified" bool NOT NULL, "Adress" varchar(200) NOT NULL, "phone" varchar(100) NOT NULL, "registerddate" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "main_customuser" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE UNIQUE INDEX "main_customuser_groups_customuser_id_group_id_8a5023dd_uniq" ON "main_customuser_groups" ("customuser_id", "group_id");
+CREATE INDEX "main_customuser_groups_customuser_id_13869e25" ON "main_customuser_groups" ("customuser_id");
+CREATE INDEX "main_customuser_groups_group_id_8149f607" ON "main_customuser_groups" ("group_id");
+CREATE UNIQUE INDEX "main_customuser_user_permissions_customuser_id_permission_id_06a652d8_uniq" ON "main_customuser_user_permissions" ("customuser_id", "permission_id");
+CREATE INDEX "main_customuser_user_permissions_customuser_id_34d37f86" ON "main_customuser_user_permissions" ("customuser_id");
+CREATE INDEX "main_customuser_user_permissions_permission_id_38e6f657" ON "main_customuser_user_permissions" ("permission_id");
+COMMIT;
